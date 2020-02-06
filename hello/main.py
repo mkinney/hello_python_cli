@@ -3,9 +3,10 @@ Usage:
   hello [options] [NAME]
 
 Options:
-  -h, --help          Print help info
   -d, --debug         Print debug info
+  -h, --help          Print help info
   -t, --title TITLE   Title to use (ex: Mr.)
+  --version           Print version
 
 """
 from docopt import docopt
@@ -13,7 +14,7 @@ from docopt import docopt
 from hello import Hello
 
 if __name__ == '__main__':
-    arguments = docopt(__doc__)
+    arguments = docopt(__doc__, version='0.0.1')
 
     debug = arguments['--debug']
     if debug:
