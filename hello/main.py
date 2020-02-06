@@ -1,26 +1,28 @@
 """
 Usage:
-  hello [-t TITLE ] [NAME]
+  hello [options] [NAME]
 
 Options:
   -h, --help          Print help info
-  -t TITLE            Title to use (ex: Mr.)
+  -d, --debug         Print debug info
+  -t, --title TITLE   Title to use (ex: Mr.)
 
 """
 from docopt import docopt
 
 from hello import Hello
-#import Hello
 
 if __name__ == '__main__':
     arguments = docopt(__doc__)
 
-    print(arguments)
+    debug = arguments['--debug']
+    if debug:
+        print('arguments:', arguments)
 
     name = arguments['NAME']
     if not name:
         name = 'world'
-    title = arguments['-t']
+    title = arguments['--title']
 
     h = Hello(name)
     if title:
