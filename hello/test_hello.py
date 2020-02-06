@@ -15,3 +15,9 @@ def test_hello_with_title():
     h = Hello('Mike')
     h.title = 'Mr.'
     assert h.hello() == 'Hello Mr. Mike'
+
+
+def test_transform():
+    h = Hello('Mike')
+    h.title = 'Mr.'
+    assert h.transform() == 'hello mr. mike'

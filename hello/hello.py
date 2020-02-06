@@ -1,3 +1,5 @@
+import utils
+
 class Hello():
 
     def __init__(self, name=''):
@@ -9,3 +11,7 @@ class Hello():
         if self.title:
             title = '{} '.format(self.title)
         return 'Hello {}{}'.format(title, self.name)
+
+    def transform(self):
+        """Silly example on how to call function from another file."""
+        return utils.lower(self.hello())
