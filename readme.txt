@@ -5,4 +5,7 @@ source venv/bin/activate
 create .envrc
 direnv allow
 
-pip install docopt pytest
+pip install docopt pytest flake8
+
+# Configure git to use pre-commit hook
+flake8 --install-hook git
