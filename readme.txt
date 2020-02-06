@@ -5,5 +5,4 @@ source venv/bin/activate
 create .envrc
 direnv allow
 
-pip install docopt
-
+pip install docopt pytest
