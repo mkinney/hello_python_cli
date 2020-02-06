@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 Usage:
   hello [options] [NAME]
@@ -11,7 +12,7 @@ Options:
 """
 from docopt import docopt
 
-from hello import Hello
+from hello_module.hello import Hello
 
 if __name__ == '__main__':
     arguments = docopt(__doc__, version='0.0.1')

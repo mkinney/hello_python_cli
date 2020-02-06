@@ -1,4 +1,5 @@
-import utils
+import hello_module.utils
+
 
 class Hello():
 
@@ -14,4 +15,4 @@ class Hello():
 
     def transform(self):
         """Silly example on how to call function from another file."""
-        return utils.lower(self.hello())
+        return hello_module.utils.lower(self.hello())

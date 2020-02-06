@@ -9,3 +9,9 @@ pip install docopt pytest flake8
 
 # Configure git to use pre-commit hook
 flake8 --install-hook git
+
+# to install 'hello'
+python setup.py install
+
+# to test
+pytest

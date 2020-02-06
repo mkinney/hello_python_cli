@@ -1,4 +1,4 @@
-from hello import Hello
+from hello_module.hello import Hello
 
 
 def test_hello_noname():
