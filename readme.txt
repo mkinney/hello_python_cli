@@ -1,4 +1,4 @@
-Simple python program
+Simple CLI python program using docopt with tests
 
 virtualenv -p python3 venv
 source venv/bin/activate

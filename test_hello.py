@@ -19,3 +19,9 @@ def test_noname():
     rc, out = subprocess.getstatusoutput('hello')
     assert rc == 0
     assert out == 'Hello world'
+
+
+def test_lower():
+    rc, out = subprocess.getstatusoutput('hello --lower Bob')
+    assert rc == 0
+    assert out == 'hello bob'
