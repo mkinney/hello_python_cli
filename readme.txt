@@ -30,3 +30,12 @@ cp _hello ~/.zsh-completions/
 exec zsh
 # 4. try it out...
 hello --<tab>
+
+# want bash completion?
+brew install bash-completion
+echo "[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion" >> ~/.bash_profile
+# reload (only need to do this once)
+source ~/.bash_profile
+copy hello_completion.sh /usr/local/etc/bash_completion.d/hello
+try it out
+hello --<tab>
