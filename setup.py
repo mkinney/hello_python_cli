@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
    name='hello_python_cli',
-   version='0.0.1',
+   version='0.0.2',
    description='Simple python hello cli program',
    author='Mike Kinney',
    author_email='mike.kinney@gmail.com',
