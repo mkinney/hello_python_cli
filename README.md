@@ -29,11 +29,13 @@ pytest
 # Notes:
 1. A push will publish to test.pypi.org
 2. If you tag a version, it will get pushed to pypi.org
+
+```
   git commit -m 'bump to v0.0.5'
   git tag v0.0.5
   git push origin v0.0.5
   git push
-
+```
 
 # Want zsh completion?
 1. add these lines to ~/.zshrc
