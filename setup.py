@@ -18,6 +18,6 @@ setup(
    author='Mike Kinney',
    author_email='mike.kinney@gmail.com',
    packages=['hello_module'],
-   install_requires=[],
+   install_requires=[('docopt','tomlkit')],
    scripts=['hello'],
 )
