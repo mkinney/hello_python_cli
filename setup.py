@@ -23,8 +23,6 @@ setup(
    author='Mike Kinney',
    author_email='mike.kinney@gmail.com',
    packages=['hello_module'],
-   package_data={'': ['_help', 'hello_completion.sh']},
-   include_package_data=True,
    install_requires=[('docopt', 'tomlkit')],
    scripts=['hello'],
 )
