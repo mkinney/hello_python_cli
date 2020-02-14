@@ -16,6 +16,8 @@ python setup.py install
 # to test
 pytest
 
+Note: A push will publish to test.pypi.org
+
 
 # want zsh completion?
 # 1. add these lines to ~/.zshrc
