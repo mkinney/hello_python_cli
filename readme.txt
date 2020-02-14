@@ -22,6 +22,7 @@ Notes:
   git commit -m 'bump to v0.0.5'
   git tag v0.0.5
   git push origin v0.0.5
+  git push
 
 
 # want zsh completion?
