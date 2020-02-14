@@ -13,10 +13,13 @@ Options:
 """
 from docopt import docopt
 
+# Setup package level version
+from .version import __version__
+
 from hello_module.hello import Hello
 
 if __name__ == '__main__':
-    arguments = docopt(__doc__, version='0.0.5')
+    arguments = docopt(__doc__, version=__version__)
 
     debug = arguments['--debug']
     if debug:
