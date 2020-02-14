@@ -7,7 +7,7 @@ jobs:
     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
     runs-on: ubuntu-18.04
 
-steps:
+    steps:
     - uses: actions/checkout@master
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
@@ -27,13 +27,14 @@ steps:
         --binary
         --out-dir dist/
         .
-- name: Publish distribution 📦 to Test PyPI
-    uses: pypa/gh-action-pypi-publish@master
-    with:
-      password: ${{ secrets.test_pypi_password }}
-      repository_url: https://test.pypi.org/legacy/
-#- name: Publish distribution 📦 to PyPI
-#    if: startsWith(github.event.ref, 'refs/tags')
+    # Actually publish to PyPI/TestPyPI
+    - name: Publish distribution 📦 to Test PyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        password: ${{ secrets.test_pypi_password }}
+        repository_url: https://test.pypi.org/legacy/
+#    - name: Publish distribution 📦 to PyPI
+#      if: startsWith(github.event.ref, 'refs/tags')
 #      uses: pypa/gh-action-pypi-publish@master
 #      with:
 #        password: ${{ secrets.pypi_password }}
