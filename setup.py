@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-   name='hello',
+   name='hello_python_cli',
    version='0.0.1',
-   description='Simple python example',
+   description='Simple python hello cli program',
    author='Mike Kinney',
    author_email='mike.kinney@gmail.com',
    packages=['hello_module'],
