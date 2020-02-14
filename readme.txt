@@ -16,7 +16,12 @@ python setup.py install
 # to test
 pytest
 
-Note: A push will publish to test.pypi.org
+Notes:
+1. A push will publish to test.pypi.org
+2. If you tag a version, it will get pushed to pypi.org
+  git commit -m 'bump to v0.0.5'
+  git tag v0.0.5
+  git push origin v0.0.5
 
 
 # want zsh completion?
