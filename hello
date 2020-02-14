@@ -12,14 +12,14 @@ Options:
 
 """
 from docopt import docopt
-
-# Setup package level version
-from .version import __version__
+import pkg_resources
 
 from hello_module.hello import Hello
 
 if __name__ == '__main__':
-    arguments = docopt(__doc__, version=__version__)
+
+    version = pkg_resources.get_distribution('hello_python_cli').version
+    arguments = docopt(__doc__, version=version)
 
     debug = arguments['--debug']
     if debug:

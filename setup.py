@@ -2,14 +2,16 @@ from setuptools import setup
 
 from io import open
 
-# Extract version info without importing entire package
-version_data = {}
-with open('version.py') as f:
-    exec(f.read(), version_data)
+import tomlkit
+
+def _get_version():
+    with open('pyproject.toml') as pyproject:
+        file_contents = pyproject.read()
+    return tomlkit.parse(file_contents)['project']['version']
 
 setup(
    name='hello_python_cli',
-   version=version_data['__version__'],
+   version=_get_version(),
    description='Simple python hello cli program',
    author='Mike Kinney',
    author_email='mike.kinney@gmail.com',
